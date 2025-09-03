@@ -28,7 +28,7 @@ author:
   bio              : "NLP researcher. M.S. graduate from KAIST, currently a visiting scholar at CMU"
   location         : "Pittsburgh, PA"
   employer         : "Carnegie Mellon University"
-  URI              : "https://chanijung.github.io" # URL
+  uri              : "https://chanijung.github.io" # URL
   email            : "1016chani@gmail.com / chanij@andrew.cmu.edu" 
 
   # Academic websites
@@ -239,7 +239,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: home
       author_profile: true
       read_time: true
       comments: true

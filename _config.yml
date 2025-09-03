@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+r# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -158,6 +158,7 @@ analytics:
 
 # Reading Files
 include:
+  - google3a788e1b1a80d3de.html
   - .htaccess
   - _pages
   - files

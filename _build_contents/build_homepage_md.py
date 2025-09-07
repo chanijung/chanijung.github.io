@@ -51,17 +51,23 @@ def _build_md_files(sheet: Spreadsheet, sheet_path_list: List[str], name: str, o
 
 
 def build_publications(sheet: Spreadsheet, sheet_path_list: List[str],
-                       output_dir="../_publications/"):
+                       output_dir=None):
+    if output_dir is None:
+        output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "_publications")
     _build_md_files(sheet, sheet_path_list, "publications", output_dir)
 
 
 def build_talks(sheet: Spreadsheet, sheet_path_list: List[str],
-                output_dir="../_talks/"):
+                output_dir=None):
+    if output_dir is None:
+        output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "_talks")
     _build_md_files(sheet, sheet_path_list, "talks", output_dir)
 
 
 def build_about(sheet: Spreadsheet, sheet_path_list: List[str],
-                out_dir="../_pages/about.md"):
+                out_dir=None):
+    if out_dir is None:
+        out_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "_pages", "about.md")
 
     def _education(df: pd.DataFrame):
         for i, r in df.iterrows():
@@ -140,7 +146,7 @@ if __name__ == '__main__':
 
     __target__ = "all"
     __gsheet__ = "https://docs.google.com/spreadsheets/d/1QeeQhPYIeTiCTJNczKSfenHCYGMLf3a2vvzCor1Gd2A/edit#gid=0"
-    __path_1__ = "./Data for CV (Dongkwan Kim).xlsx"
+    __path_1__ = os.path.join(os.path.dirname(__file__), "Data for CV (Dongkwan Kim).xlsx")
 
     try:
         gc = gspread.oauth()

@@ -57,13 +57,6 @@ def build_publications(sheet: Spreadsheet, sheet_path_list: List[str],
     _build_md_files(sheet, sheet_path_list, "publications", output_dir)
 
 
-def build_talks(sheet: Spreadsheet, sheet_path_list: List[str],
-                output_dir=None):
-    if output_dir is None:
-        output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "_talks")
-    _build_md_files(sheet, sheet_path_list, "talks", output_dir)
-
-
 def build_about(sheet: Spreadsheet, sheet_path_list: List[str],
                 out_dir=None):
     if out_dir is None:
@@ -101,12 +94,12 @@ def build_about(sheet: Spreadsheet, sheet_path_list: List[str],
                 lines.append(f"- {head} of {c} ({semesters}), *{notes}*\n")
 
     def _honors(df: pd.DataFrame):
+        # Extract year from date and sort
+        df['year'] = pd.to_datetime(df['date']).dt.year
+        df = df.sort_values(by=['year'], ascending=False)
         for i, r in df.iterrows():
-            dobj = datetime.strptime(r.date, "%Y-%m-%d")
-            if r.url == "":
-                lines.append(f"- {r.title}, *{r.organization}*, {dobj.strftime('%Y')}\n")
-            else:
-                lines.append(f"- [{r.title}]({r.url}), *{r.organization}*, {dobj.strftime('%Y')}\n")
+            if pd.notna(r['title']):
+                lines.append(f"- {r.title}\n")
 
     def _open_source_contributions(df: pd.DataFrame):
         for i, r in df.iterrows():
@@ -119,6 +112,10 @@ def build_about(sheet: Spreadsheet, sheet_path_list: List[str],
     for idx, about_row in about.iterrows():
 
         if not bool(about_row.use):
+            continue
+
+        # Skip talks, honors, and academic services sections
+        elif about_row.type == "sheet" and about_row.content in ["talks", "honors", "academic services"]:
             continue
 
         elif about_row.type == "text":
@@ -146,7 +143,7 @@ if __name__ == '__main__':
 
     __target__ = "all"
     __gsheet__ = "https://docs.google.com/spreadsheets/d/1QeeQhPYIeTiCTJNczKSfenHCYGMLf3a2vvzCor1Gd2A/edit#gid=0"
-    __path_1__ = os.path.join(os.path.dirname(__file__), "Data for CV (Dongkwan Kim).xlsx")
+    __path_1__ = os.path.join(os.path.dirname(__file__), "Data for CV (Chani Jung).xlsx")
 
     try:
         gc = gspread.oauth()
@@ -159,6 +156,3 @@ if __name__ == '__main__':
 
     if __target__ == "publications" or __target__ == "all":
         build_publications(sheet=sh, sheet_path_list=[__path_1__])
-
-    if __target__ == "talks" or __target__ == "all":
-        build_talks(sheet=sh, sheet_path_list=[__path_1__])

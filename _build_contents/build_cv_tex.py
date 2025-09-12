@@ -193,7 +193,7 @@ if __name__ == '__main__':
     __target__ = "all"
     __gsheet__ = "https://docs.google.com/spreadsheets/d/1QeeQhPYIeTiCTJNczKSfenHCYGMLf3a2vvzCor1Gd2A/"
     __dir__ = "./cv/"
-    __path_1__ = "./Data for CV (Dongkwan Kim).xlsx"
+    __path_1__ = "./Data for CV (Chani Jung).xlsx"
 
     os.makedirs(__dir__, exist_ok=True)
 

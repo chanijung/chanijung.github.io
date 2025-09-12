@@ -1,6 +1,8 @@
-# dongkwan-kim.github.io
+# chanijung.github.io
 
-## Instructions from [dongkwan-kim](https://github.com/dongkwan-kim)
+This repository is a fork of [dongkwan-kim.github.io](https://github.com/dongkwan-kim/dongkwan-kim.github.io), customized for my personal academic website. Thank you to [dongkwan-kim](https://github.com/dongkwan-kim) for sharing the template.
+
+## Original Instructions
 
 ### Set-up
 

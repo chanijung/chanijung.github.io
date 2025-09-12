@@ -7,23 +7,23 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Dongkwan Kim"
+title                    : "Chani Jung"
 title_separator          : "-"
-name                     : &name "Dongkwan Kim"
-description              : &description "personal description"
-url                      : https://dongkwan-kim.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Chani Jung"
+description              : &description "NLP researcher"
+url                      : https://chanijung.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "dongkwan-kim/dongkwan-kim.github.io"
+repository               : "chanijung/chanijung.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 160
 future                   : false
-read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
+read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : false # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
-    shortname            : "dongkwan-kim"
+    shortname            : "chanijung"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -50,7 +50,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-google_site_verification : "Cu-WTYbse3f7mvOr73nDCGJdG7XvKt7u8W2ZG7CKCTM"
+google_site_verification : "zwdjU6zUktv5KVBLVK4hOoZ2Rmxzn3gRrTZwkl2Ex3w"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -73,26 +73,25 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-gtag" # false (default), "google", "google-universal", "google-universal", "custom"
+  provider               :  "google-analytics-4" # false (default), "google", "google-universal", "google-universal", "custom"
   google:
-    tracking_id_ga4      : "G-BT7Y11J00Z"
-    tracking_id_ua       : "UA-79719474-1"
+    tracking_id          : "G-WY8E58E4ER"
     # Currently, you have to set both ids for GA4 and UA.
     # See _includes/analytics-providers/google-gtag.html
 
 
 # Site Author
 author:
-  name             : "Dongkwan Kim"
-  edit_url         : "https://docs.google.com/spreadsheets/d/1QeeQhPYIeTiCTJNczKSfenHCYGMLf3a2vvzCor1Gd2A/"
-  cv_url           : "https://drive.google.com/file/d/1356EjDvCQWsbRGiKO2-ms3urAiXEOKc0/view?usp=sharing"
-  avatar           : "https://raw.githubusercontent.com/uilab-github/uilab-github.github.io/master/public/assets/images/members/dongkwan_kim.jpg"
-  bio              : "Postdoctoral Researcher at Texas A&M University"
-  location         : "College Stataion, TX"
+  name             : "Chani Jung"
+  edit_url         : "https://docs.google.com/spreadsheets/d/19RBVtIew9CIjye5ZNT41NDICEiuNs5v8V2_YCisYRFI/" #"https://docs.google.com/spreadsheets/d/1QeeQhPYIeTiCTJNczKSfenHCYGMLf3a2vvzCor1Gd2A/"
+  cv_url           : "/assets/files/cv.pdf"
+  avatar           : "chani_jung_large.jpg"
+  bio              : "NLP researcher"
+  location         : "Pittsburgh, PA"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "https://scholar.google.com/citations?user=KgjSE64AAAAJ"
-  email            : dongkwan.kim@tamu.edu
+  googlescholar    : "https://scholar.google.com/citations?user=Xr2t1kYAAAAJ&hl=en"
+  email            : "&#49;&#48;&#49;&#54;&#99;&#104;&#97;&#110;&#105;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -101,20 +100,20 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "dongkwan-kim"
+  github           : "chanijung"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "dongkwan-kim"
+  linkedin         : "chanijung"
   orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "_dongkwan_kim"
+  twitter          : "_chani_jung"
   vine             :
   weibo            :
   xing             :
@@ -124,6 +123,7 @@ author:
 
 # Reading Files
 include:
+  - google3a788e1b1a80d3de.html
   - .htaccess
   - _pages
   - files
@@ -189,24 +189,13 @@ collections:
   #portfolio:
   #  output: true
   #  permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+  #talks:
+  #  output: true
+  #  permalink: /:collection/:path/
 
 
 # Defaults
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   # _pages
   - scope:
       path: ""
@@ -231,7 +220,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comments: true
+      comments: false
   # _portfolio
   #- scope:
   #    path: ""
@@ -241,14 +230,7 @@ defaults:
   #    author_profile: true
   #    share: true
   #    comment: true
-  # _talks
-  #- scope:
-  #    path: ""
-  #    type: talks
-  #  values:
-  #    layout: talk
-  #    author_profile: true
-  #    share: true
+
 
 # Sass/SCSS
 sass:
@@ -260,7 +242,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Asia/Seoul # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins

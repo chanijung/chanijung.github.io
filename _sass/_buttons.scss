@@ -18,6 +18,10 @@
     display: inline-block;
     transition: all .5s ease;
     border-radius: 4px;
+
+    &.award-button {
+      background-color: #FACC15 !important;
+    }
     &:hover {
       background-color: $my-secondary-color;
     }

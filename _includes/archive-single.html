@@ -27,9 +27,6 @@
     {% endif %}
 
     <h2 class="archive__item-title" itemprop="headline">
-      {% if prefix and prefix_index %}
-        [{{prefix}}{{prefix_index}}]
-      {% endif %}
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
@@ -45,13 +42,22 @@
       <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
     {% elsif post.collection == 'publications' %}
       <p>
-        {{post.authors | replace: "Dongkwan Kim", "<strong>Dongkwan Kim</strong>"}}.
+        {{post.authors | replace: "Chani Jung", "<strong>Chani Jung</strong>""}}.
         {% if post.venueurl %}
           <a href="{{post.venueurl}}"><em>{{ post.venue }}</em></a>, 
         {% else %}
           <em>{{post.venue}}</em>, 
         {% endif %}
         {{ post.date | default: "1900-01-01" | date: "%Y" }}
+      </p>
+      <p class="link-buttons">
+        {% if post.paperurl %}<a href=" {{ post.paperurl }} " target="_blank">Paper</a>{% endif %}
+        {% if post.arxivurl %}<a href=" {{ post.arxivurl }} " target="_blank">arXiv</a>{% endif %}
+        {% if post.codeurl %}<a href=" {{ post.codeurl }} " target="_blank">Code</a>{% endif %}
+        {% if post.dataurl %}<a href=" {{ post.dataurl }} " target="_blank">Data</a>{% endif %}
+        {% if post.posterurl %}<a href=" {{ post.posterurl }} " target="_blank">Poster</a>{% endif %}
+        {% if post.slideurl %}<a href=" {{ post.slideurl }} " target="_blank">Slide</a>{% endif %}
+        {% if post.award and post.award != "" %}<a class="award-button">🏆 {{ post.award }}</a>{% endif %}
       </p>
     {% elsif post.date %}
       <p class="page__date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }} <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
@@ -75,15 +81,5 @@
       <!-- <p><a href=" {{ post.paperurl }} ">PDF</a></p> -->
     {% endif %}
 
-    {% if post.paperurl or post.arxivurl or post.codeurl or post.dataurl or post.posterurl or post.slideurl %}
-    <p class="link-buttons">
-      {% if post.paperurl %}<a href=" {{ post.paperurl }} " target="_blank">Paper</a>{% endif %}
-      {% if post.arxivurl %}<a href=" {{ post.arxivurl }} " target="_blank">arXiv</a>{% endif %}
-      {% if post.codeurl %}<a href=" {{ post.codeurl }} " target="_blank">Code</a>{% endif %}
-      {% if post.dataurl %}<a href=" {{ post.dataurl }} " target="_blank">Data</a>{% endif %}
-      {% if post.posterurl %}<a href=" {{ post.posterurl }} " target="_blank">Poster</a>{% endif %}
-      {% if post.slideurl %}<a href=" {{ post.slideurl }} " target="_blank">Slide</a>{% endif %}
-    </p>
-    {% endif %}
   </article>
 </div>

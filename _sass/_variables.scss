@@ -59,11 +59,11 @@ $lighter-gray               : mix(#fff, $gray, 90%);
 $my-primary-color: #479FB0;
 $my-secondary-color: #FFDE9B;
 
-$body-color                 : #101410;
+$body-color                 : #ffffff;
 $background-color           : $body-color;
-$code-background-color      : #000000;
+$code-background-color      : #f8f9fa;
 $code-background-color-dark : $light-gray;
-$text-color                 : #ffffffbf;
+$text-color                 : #212529;
 $border-color               : $lighter-gray;
 
 $primary-color              : #7a8288;
@@ -78,7 +78,7 @@ $dribbble-color             : #ea4c89;
 $facebook-color             : #3b5998;
 $flickr-color               : #ff0084;
 $foursquare-color           : #0072b1;
-$github-color               : $lighter-gray;
+$github-color               : $text-color;
 $google-plus-color          : #dd4b39;
 $instagram-color            : #517fa4;
 $lastfm-color               : #d51007;
@@ -99,8 +99,8 @@ $xing-color                 : #006567;
 $link-color                 : $my-primary-color;
 $link-color-hover           : mix(#fff, $my-secondary-color, 40%);
 $link-color-visited         : mix(#000, $my-secondary-color, 25%);
-$masthead-link-color        : #fff;
-$masthead-link-color-hover  : mix(#000, $masthead-link-color, 25%);
+$masthead-link-color        : $text-color;
+$masthead-link-color-hover  : $my-primary-color;
 
 
 /*

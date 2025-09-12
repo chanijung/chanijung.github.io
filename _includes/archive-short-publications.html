@@ -4,7 +4,7 @@
     {% if prefix %}
       [{{prefix}}{{prefix_index}}]
     {% endif %}
-    {{post.authors | replace: "Dongkwan Kim", "<strong>Dongkwan Kim</strong>"}}.
+    {{post.authors | replace: "Chani Jung", "<strong>Chani Jung</strong>"}}.
     <a href="{{base_path}}{{post.permalink}}">"{{post.title}}"</a>,
     {% if post.venueurl %}
       <a href="{{post.venueurl}}" class="publication-venue"><em>{{post.venue}}</em></a>, 
@@ -21,6 +21,7 @@
     {% if post.dataurl %}<a href=" {{ post.dataurl }} " target="_blank">Data</a>{% endif %}
     {% if post.posterurl %}<a href=" {{ post.posterurl }} " target="_blank">Poster</a>{% endif %}
     {% if post.slideurl %}<a href=" {{ post.slideurl }} " target="_blank">Slide</a>{% endif %}
+    {% if post.award and post.award != "" %}<a class="award-button">🏆 {{ post.award }}</a>{% endif %}
   </p>
   {% endif %}
 </div>

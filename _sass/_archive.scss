@@ -4,6 +4,17 @@
   }
   .link-buttons {
     margin: 0 0 0.8em;
+    
+    a.award-button {
+      color: #1F2937!important;
+      text-decoration: none!important;
+      padding: .0em .4em;
+      background-color: #FEF08A !important;
+      display: inline-block;
+      transition: all .5s ease;
+      border-radius: 4px;
+      font-weight: normal;
+    }
   }
   .publication-venue {
     color: $text-color;

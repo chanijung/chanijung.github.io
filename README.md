@@ -1,6 +1,6 @@
 # chanijung.github.io
 
-This repository is a fork of [dongkwan-kim.github.io](https://github.com/dongkwan-kim/dongkwan-kim.github.io), customized for my personal academic website. Thank you to [dongkwan-kim](https://github.com/dongkwan-kim) for sharing the template.
+This repository is a fork of [dongkwan-kim.github.io](https://github.com/dongkwan-kim/dongkwan-kim.github.io), customized for my personal academic website. Thank you to [Dongkwan](https://github.com/dongkwan-kim) for sharing the template!
 
 ## Original Instructions
 
@@ -42,11 +42,9 @@ You have to change the below contents with yours.
 - Thumbnails & favicons: https://github.com/dongkwan-kim/dongkwan-kim.github.io/tree/master/images
 ---
 
-## Original Readme
+## Original Template Information
 
-A Github Pages template for academic websites. This was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.
-
-I think I've got things running smoothly and fixed some major bugs, but feel free to file issues or make pull requests if you want to improve the generic template / theme.
+This website is built using a customized academic website template. The original template was forked from [dongkwan-kim.github.io](https://github.com/dongkwan-kim/dongkwan-kim.github.io), which itself was based on the Academic Pages template.
 
 *Note: if you are using this repo and now get a notification about a security vulnerability, delete the Gemfile.lock file.*
 

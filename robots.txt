@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /README.md
+Disallow: /CONTRIBUTING.md
+Disallow: /LICENSE
+Disallow: /CHANGELOG.md
+Disallow: /_build_contents/
+Disallow: /_drafts/
+
+# Allow everything else
+Allow: /
+
+Sitemap: https://chanijung.github.io/sitemap.xml

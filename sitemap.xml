@@ -1,0 +1,38 @@
+---
+layout: null
+sitemap: false
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in site.pages %}
+  {% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}
+      <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        {% if page.date %}
+        <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+        {% endif %}
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+  {% endif %}
+  {% endfor %}
+  {% for post in site.posts %}
+      <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+      </url>
+  {% endfor %}
+  {% for publication in site.publications %}
+      <url>
+        <loc>{{ site.url }}{{ publication.url }}</loc>
+        {% if publication.date %}
+        <lastmod>{{ publication.date | date: "%Y-%m-%d" }}</lastmod>
+        {% endif %}
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+      </url>
+  {% endfor %}
+</urlset>

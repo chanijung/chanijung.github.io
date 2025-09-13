@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Chani Jung - NLP Researcher"
+title                    : "Chani Jung"
 title_separator          : "|"
 name                     : &name "Chani Jung"
-description              : &description "Personal academic website of Chani Jung - NLP researcher at Carnegie Mellon University"
+description              : &description "NLP researcher"
 url                      : https://chanijung.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "chanijung/chanijung.github.io"

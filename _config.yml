@@ -15,7 +15,7 @@ url                      : https://chanijung.github.io # the base hostname & pro
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "chanijung/chanijung.github.io"
 teaser                   : "chani_jung_large.jpg" # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-og_image                 : "/images/chani_jung_large.jpg" # Open Graph/Twitter default site image
+og_image                 : "https://chanijung.github.io/images/chani_jung_large.jpg" # Open Graph/Twitter default site image
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 160
 future                   : false

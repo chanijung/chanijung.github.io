@@ -10,18 +10,14 @@
 
   margin: 0;
 
-  a {
-    color: black!important;
+  a:not(.award-button) {
+    color: white!important;
     text-decoration: none!important;
     padding: .0em .4em;
     background-color: $my-primary-color;
     display: inline-block;
     transition: all .5s ease;
     border-radius: 4px;
-
-    &.award-button {
-      background-color: #FACC15 !important;
-    }
     &:hover {
       background-color: $my-secondary-color;
     }

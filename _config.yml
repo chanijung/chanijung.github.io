@@ -74,9 +74,10 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-analytics-4" # false (default), "google", "google-universal", "google-universal", "custom"
+  provider               :  "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          : "G-WY8E58E4ER"
+    tracking_id_ga4      : "G-WY8E58E4ER"
     # Currently, you have to set both ids for GA4 and UA.
     # See _includes/analytics-providers/google-gtag.html
 

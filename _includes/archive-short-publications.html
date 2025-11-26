@@ -5,7 +5,13 @@
       [{{prefix}}{{prefix_index}}]
     {% endif %}
     {{post.authors | replace: "Chani Jung", "<strong>Chani Jung</strong>"}}.
-    <a href="{{base_path}}{{post.permalink}}">"{{post.title}}"</a>,
+    {% if post.link %}
+      <a href="{{post.link}}">"{{post.title}}"</a>,
+    {% elsif post.paperurl %}
+      <a href="{{post.paperurl}}">"{{post.title}}"</a>,
+    {% else %}
+      <a href="{{base_path}}{{post.permalink}}">"{{post.title}}"</a>,
+    {% endif %}
     {% if post.venueurl %}
       <a href="{{post.venueurl}}" class="publication-venue"><em>{{post.venue}}</em></a>, 
     {% else %}

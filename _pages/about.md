@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I’m currently a visiting researcher in the [Language Technologies Institute at CMU](https://lti.cs.cmu.edu), working with [Maarten Sap](https://maartensap.com). I recently completed an MS in [School of Computing at KAIST](https://cs.kaist.ac.kr), where I was advised by [Alice Oh](https://aliceoh9.github.io).
+Hi! I'm a recent master's graduate in [School of Computing at KAIST](https://cs.kaist.ac.kr), where I was advised by [Alice Oh](https://aliceoh9.github.io). I'm currently collaborating with  [Language Technologies Institute at CMU](https://lti.cs.cmu.edu), working with [Maarten Sap](https://maartensap.com).
 
-My research interests lie in human-centered NLP and computational social science. During my master’s studies, I have focused on key yet under-explored facets of socio-cultural intelligence in language models, including cultural sensitivity, theory of mind, and question-asking abilities.
+My research interests lie in human-centered NLP. I have focused on key yet under-explored facets of socio-cultural intelligence in language models, including cultural sensitivity, theory of mind, and question-asking abilities.
 
 ## Selected Publications ([See all](/publications))
 

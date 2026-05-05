@@ -12,6 +12,8 @@ Hi! I'm an incoming Ph.D. student in [Computer Science at University of British 
 
 My research centers on socio-cultural intelligence in language models — understanding how LLMs [reason about minds](https://aclanthology.org/2024.emnlp-main.1105/), [navigate cultural differences](https://aclanthology.org/2024.naacl-long.236/), and respond to [sensitive](https://aclanthology.org/2026.findings-eacl.327/) and [context-dependent](https://arxiv.org/abs/2509.25897) situations.
 
+For more on my background and research, please see my [CV](https://chanijung.github.io/assets/files/cv.pdf).
+
 ## Selected Publications ([See all](/publications))
 
 {% assign publications = site.publications | sort: "selected" %}

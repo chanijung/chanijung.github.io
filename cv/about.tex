@@ -1,0 +1,67 @@
+\cvsection{About-Page}
+
+{\small
+
+---
+permalink: /
+title: "About"
+excerpt: "About me"
+author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
+---
+
+Hi! I'm a recent master's graduate in \href{https://cs.kaist.ac.kr}{School of Computing at KAIST}, where I was advised by \href{https://aliceoh9.github.io}{Alice Oh}. I'm currently collaborating with  \href{https://lti.cs.cmu.edu}{Language Technologies Institute at CMU}, working with \href{https://maartensap.com}{Maarten Sap}.
+
+My research interests lie in human-centered NLP. I have focused on key yet under-explored facets of socio-cultural intelligence in language models, including cultural sensitivity, theory of mind, and question-asking abilities.
+
+## Recent Publications (\href{/publications}{See all})
+
+{% assign reversed_publications = site.publications | reverse %}
+{% for post in reversed_publications limit:7 %}
+{% include archive-short-publications.html %}
+{% endfor %}
+
+## Selected Publications (\href{/publications}{See all})
+
+{% assign publications = site.publications | sort: "selected" %}
+{% for post in publications %}
+{% if post.selected != "" %}
+{% include archive-short-publications.html %}
+{% endif %}
+{% endfor %}
+
+## Recent Publications (\href{/publications}{See all})
+
+{% assign publication_groups = site.publications | sort: "type" | group_by: "type" %}
+{% for publications in publication_groups %}
+{% assign prefix = publications.name | slice: 0 | capitalize %}
+{% for post in publications.items reversed | sort: "selected" %}
+{% assign prefix_index = forloop.length | minus: forloop.index0 %}
+{% include archive-short-publications.html %}
+{% endfor %}
+{% endfor %}
+
+education
+
+## Talks & Presentations
+
+{% assign reversed_talks = site.talks | reverse %}
+{% for post in reversed_talks limit:7 %}
+{% include archive-short-talks.html %}
+{% endfor %}
+
+academic services
+
+teaching experiences
+
+honors
+
+open source contributions
+
+honors
+
+}
+
+\hfill \break

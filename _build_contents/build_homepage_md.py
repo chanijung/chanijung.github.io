@@ -39,8 +39,9 @@ def _build_md_files(sheet: Spreadsheet, sheet_path_list: List[str], name: str, o
         file_name = f"{ym}-{sv.replace(' ', '-').replace('/', '').lower()}.md"
         file_path = os.path.join(output_dir, file_name)
 
-        kv = [f"{kv_escape(k, v)}\n" for k, v in r.items() if k != "contents" and not k.endswith("url")]
-        urls = [f"{k}: '{v}'\n" for k, v in r.items() if k.endswith("url") and v != ""]
+        skip_keys = {"contents", "permalink", "venueurl"}
+        kv = [f"{kv_escape(k, v)}\n" for k, v in r.items() if k not in skip_keys and not k.endswith("url")]
+        urls = [f"{k}: '{v}'\n" for k, v in r.items() if k.endswith("url") and k != "venueurl" and v != ""]
         lines = ["---\n", *kv, *urls, "---\n\n"]
         if hasattr(r, "contents"):
             lines.append(r.contents)

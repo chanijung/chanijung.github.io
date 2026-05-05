@@ -49,7 +49,7 @@ def _build_about_text(sheet: Spreadsheet, sheet_path_list: List[str], tab_name: 
     tab = get_tab_df(sheet, sheet_path_list, tab_name)
     lines = [rf"\cvsection{{{tab_name.title()}}}", "\n" * 2, r"{\small", "\n" * 2]
     for i, r in tab.iterrows():
-        tex_text = change_md_to_tex(r.text)
+        tex_text = change_md_to_tex(r.content)
         lines += [tex_text, "\n" * 2]
     lines += ["}", "\n" * 2, r"\hfill \break"]
     return lines
@@ -193,7 +193,7 @@ if __name__ == '__main__':
     __target__ = "all"
     __gsheet__ = "https://docs.google.com/spreadsheets/d/1QeeQhPYIeTiCTJNczKSfenHCYGMLf3a2vvzCor1Gd2A/"
     __dir__ = "./cv/"
-    __path_1__ = "./Data for CV (Chani Jung).xlsx"
+    __path_1__ = os.path.join(os.path.dirname(__file__), "Data for CV (Chani Jung).xlsx")
 
     os.makedirs(__dir__, exist_ok=True)
 
@@ -204,7 +204,7 @@ if __name__ == '__main__':
         gc, sh = None, None
 
     if __target__ == "about" or __target__ == "all":
-        tex = _build_about_text(sh, [__path_1__], "about")
+        tex = _build_about_text(sh, [__path_1__], "about-page")
         save_lines(tex, __dir__, "about.tex")
 
     if __target__ == "education" or __target__ == "all":

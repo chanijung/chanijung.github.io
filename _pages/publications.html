@@ -15,11 +15,13 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign publication_groups = site.publications | sort: "type" | group_by: "type" %}
-{% for publications in publication_groups %}
-  <h2 class="archive__subtitle">{{publications.name | capitalize}}</h2>
-  {% assign sorted_items = publications.items | sort: "date", "last" %}
-  {% for post in sorted_items reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+{% assign type_order = "preprint,conference and journal,workshop" | split: "," %}
+{% for type_name in type_order %}
+{% assign type_pubs = site.publications | where: "type", type_name | sort: "date" | reverse %}
+{% if type_pubs.size > 0 %}
+<h2 class="archive__subtitle">{{ type_name | capitalize }}</h2>
+{% for post in type_pubs %}
+{% include archive-single.html %}
+{% endfor %}
+{% endif %}
 {% endfor %}

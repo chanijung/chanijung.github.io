@@ -8,20 +8,15 @@
     {% if post.link %}
       <a href="{{post.link}}">"{{post.title}}"</a>,
     {% elsif post.paperurl %}
-      <a href="{{post.paperurl}}">"{{post.title}}"</a>,
+      <a href="{{post.paperurl}}" target="_blank">"{{post.title}}"</a>,
     {% else %}
-    <a href="{{base_path}}{{post.permalink}}">"{{post.title}}"</a>,
+      "{{post.title}}",
     {% endif %}
-    {% if post.venueurl %}
-      <a href="{{post.venueurl}}" class="publication-venue"><em>{{post.venue}}</em></a>, 
-    {% else %}
-      <em>{{post.venue}}</em>, 
-    {% endif %}
+      <em>{{post.venue}}</em>,
     {{post.date | date: "%Y"}}
   </p>
   {% if post.paperurl or post.arxivurl or post.codeurl or post.dataurl or post.posterurl or post.slideurl %}
   <p class="link-buttons">
-    {% if post.paperurl %}<a href=" {{ post.paperurl }} " target="_blank">Paper</a>{% endif %}
     {% if post.arxivurl %}<a href=" {{ post.arxivurl }} " target="_blank">arXiv</a>{% endif %}
     {% if post.codeurl %}<a href=" {{ post.codeurl }} " target="_blank">Code</a>{% endif %}
     {% if post.dataurl %}<a href=" {{ post.dataurl }} " target="_blank">Data</a>{% endif %}

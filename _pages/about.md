@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm a recent master's graduate in [School of Computing at KAIST](https://cs.kaist.ac.kr), where I was advised by [Alice Oh](https://aliceoh9.github.io). I'm currently collaborating with  [Language Technologies Institute at CMU](https://lti.cs.cmu.edu), working with [Maarten Sap](https://maartensap.com).
+Hi! I'm an incoming Ph.D. student in [Computer Science at University of British Columbia](https://www.cs.ubc.ca), where I will be advised by [Vered Shwartz](https://www.cs.ubc.ca/~vshwartz/). I recently completed my master's at the School of Computing at KAIST, advised by [Alice Oh](https://aliceoh9.github.io).
 
-My research interests lie in human-centered NLP. I have focused on key yet under-explored facets of socio-cultural intelligence in language models, including cultural sensitivity, theory of mind, and question-asking abilities.
+My research centers on socio-cultural intelligence in language models — understanding how LLMs [reason about minds](https://aclanthology.org/2024.emnlp-main.1105/), [navigate cultural differences](https://aclanthology.org/2024.naacl-long.236/), and respond to [sensitive](https://aclanthology.org/2026.findings-eacl.327/) and [context-dependent](https://arxiv.org/abs/2509.25897) situations.
 
 ## Selected Publications ([See all](/publications))
 

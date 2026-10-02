@@ -152,7 +152,8 @@ if __name__ == '__main__':
     except:
         gc, sh = None, None
 
-    if __target__ == "about" or __target__ == "all":
+    # about.md is edited by hand; "all" must not overwrite it.
+    if __target__ == "about":
         build_about(sheet=sh, sheet_path_list=[__path_1__])
 
     if __target__ == "publications" or __target__ == "all":

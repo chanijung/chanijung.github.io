@@ -89,11 +89,11 @@ author:
   cv_url           : "/assets/files/cv.pdf"
   avatar           : "chani_jung_large.jpg"
   bio              : "PhD Student at UBC CS"
-  location         : "Pittsburgh, PA"
+  location         : "Vancouver, BC"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=Xr2t1kYAAAAJ&hl=en"
-  email            : "&#49;&#48;&#49;&#54;&#99;&#104;&#97;&#110;&#105;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;"
+  email            : "jchani@cs.ubc.ca"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -153,6 +153,9 @@ exclude:
   - package.json
   - tmp
   - vendor
+  - venv
+  - _build_contents
+  - cv
 keep_files:
   - .git
   - .svn

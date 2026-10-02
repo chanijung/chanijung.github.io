@@ -8,9 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm an incoming Ph.D. student in [Computer Science at University of British Columbia](https://www.cs.ubc.ca), where I will be advised by [Vered Shwartz](https://www.cs.ubc.ca/~vshwartz/). I recently completed my master's at the School of Computing at KAIST, advised by [Alice Oh](https://aliceoh9.github.io).
+Hi! I'm a Ph.D. student in [Computer Science at University of British Columbia](https://www.cs.ubc.ca), advised by [Vered Shwartz](https://www.cs.ubc.ca/~vshwartz/). I completed my master's at the School of Computing at KAIST, advised by [Alice Oh](https://aliceoh9.github.io).
 
-My research centers on socio-cultural intelligence in language models — understanding how LLMs [reason about minds](https://aclanthology.org/2024.emnlp-main.1105/), [navigate cultural differences](https://aclanthology.org/2024.naacl-long.236/), and respond to [sensitive](https://aclanthology.org/2026.findings-eacl.327/) and [context-dependent](https://arxiv.org/abs/2509.25897) situations.
+My research centers on prosocial AI. I’m particularly interested in developing AI systems that support long-term user well-being while mitigating emerging risks such as over-reliance on AI, homogenization, and narrowing of perspectives. My work has also explored the socio-cultural intelligence of language models — studying how LLMs [reason about minds](https://aclanthology.org/2024.emnlp-main.1105/), [navigate cultural differences](https://aclanthology.org/2024.naacl-long.236/), and respond to [sensitive](https://aclanthology.org/2026.findings-eacl.327/) and [context-dependent](https://arxiv.org/abs/2509.25897) situations.
 
 For more on my background and research, please see my [CV](https://chanijung.github.io/assets/files/cv.pdf).
 
